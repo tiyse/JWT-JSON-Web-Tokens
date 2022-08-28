@@ -1,6 +1,7 @@
 # JWT-JSON-Web-Tokens
 
 - https://cdnjs.com/libraries/crypto-js
+- https://cryptojs.gitbook.io/docs/
 
 - <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 - <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/enc-base64.min.js"></script>
