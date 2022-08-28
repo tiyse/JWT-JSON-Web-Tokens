@@ -1,0 +1,21 @@
+/*
+    var to_sign = create_token();
+    //very_bas64_key(btoa('This is a printable string.\n'), to_sign);
+    //very_secret(btoa('This is a printable string.\n'), to_sign);
+*/
+function very_secret(secret, token){
+    var signature = CryptoJS.HmacSHA256(token, secret);
+    signature = base64url(signature);
+    var signedToken = token + "." + signature;
+
+    return signedToken;
+}
+
+function very_bas64_key(key_b64, token){
+    var key = CryptoJS.enc.Base64.parse(key_b64).toString(CryptoJS.enc.Utf8);
+    var signature = CryptoJS.HmacSHA256(token, key);
+    signature = base64url(signature);
+    var signedToken = token + "." + signature;
+
+    return signedToken;
+}
